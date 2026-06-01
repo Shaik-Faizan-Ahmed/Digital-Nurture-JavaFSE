@@ -22,6 +22,20 @@
     height:150px;
     }
 
+    form{
+    width:400px;
+    padding:20px;
+    border:1px solid black;
+    }
+
+    input,
+    select,
+    textarea{
+        width:100%;
+        margin-bottom:10px;
+        padding:8px;
+    }
+
     </style>
 </head>
 
@@ -125,17 +139,126 @@
         </table>
 
     </section>
+    <section id="registration">
+
+        <h2>Event Registration</h2>
+
+        <form onsubmit="showMessage(); return false;">
+
+            <input type="text" placeholder="Enter Name" required autofocus>
+
+            <br><br>
+
+            <input type="email" placeholder="Enter Email" required>
+
+            <br><br>
+
+            <input type="date" required>
+
+            <br><br>
+
+            <select required>
+
+                <option value="">
+                    Select Event
+                </option>
+
+                <option>
+                    Sports Meet
+                </option>
+
+                <option>
+                    Cultural Fest
+                </option>
+
+                <option>
+                    Tree Plantation
+                </option>
+
+            </select>
+
+            <br><br>
+
+            <textarea placeholder="Enter Message" required>
+    </textarea>
+
+            <br><br>
+
+            <button type="submit">
+                Register
+            </button>
+
+            <br><br>
+
+            <output id="confirmation"></output>
+
+        </form>
+
+    </section>
     <section id="contact">
         <h2>Contact</h2>
         <p>Contact the city council for assistance.</p>
     </section>
+<h2>Event Feedback</h2>
 
+<input type="text" id="phone" placeholder="Enter Phone Number" onblur="validatePhone()">
+
+<br><br>
+
+<select onchange="showFee(this.value)">
+
+    <option value="">
+        Select Event
+    </option>
+
+    <option value="100">
+        Sports Meet
+    </option>
+
+    <option value="200">
+        Cultural Fest
+    </option>
+
+    <option value="150">
+        Tree Plantation
+    </option>
+
+</select>
+
+<p id="fee"></p>
+
+<br>
+
+<img src="event1.jpg" id="eventImg" width="200" ondblclick="enlargeImage()">
+
+<br><br>
+
+<textarea id="feedback" placeholder="Enter Feedback" onkeyup="countChars()">
+</textarea>
+
+<p id="count">
+    Characters: 0
+</p>
+
+<br>
+
+<button onclick="confirmSubmission()">
+    Submit Feedback
+</button>
     <!--Footer-->
 
     <footer>
         <p>© 2026 Community Portal</p>
     </footer>
+    <script>
 
+    function showMessage()
+    {
+        document.getElementById("confirmation").innerHTML=
+        "Registration Successful!";
+    }
+    
+    </script>
 </body>
 
 </html>
