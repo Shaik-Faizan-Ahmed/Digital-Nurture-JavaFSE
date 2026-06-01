@@ -65,6 +65,8 @@ h2{
     border:1px solid gray;
     padding:10px;
     margin:10px;
+
+    background-color:rgba(0,102,204,0.1);
 }
 
 /* Grouping Selector */
@@ -73,3 +75,20 @@ h3,
 p{
     color:darkgreen;
 }
+/* Color and Background Styling */
+
+body{
+    background-color:#f5f5f5;
+}
+
+h2{
+    color:white;
+    padding:10px;
+
+    background:linear-gradient(
+        to right,
+        #003366,
+        #0066cc
+    );
+}
+ 
