@@ -43,10 +43,10 @@
     <!-- Navigation-->
 
     <nav>
-        <a href="#Home">Home</a>
-        <a href="#Events">Events</a>
-        <a href="#Contacts">Contacts</a>
-        <a href="help.html" target="_black">Help</a>
+        <a href="#home">Home</a>
+        <a href="#events">Events</a>
+        <a href="#contact">Contact</a>
+        <a href="help.html" target="_blank">Help</a>
     </nav>
 
     <div id="welcomeBanner">
@@ -63,6 +63,7 @@
 
     </div>
 
+
     <p class="highlight">
         Community Cleanup Drive
     </p>
@@ -77,7 +78,17 @@
         <h2>Home</h2>
         <p>Welcome to the Community Event Portal.</p>
     </section>
+    <h2>Event Promo Video</h2>
 
+    <video width="500" controls oncanplay="videoReady()">
+
+        <source src="promo.mp4" type="video/mp4">
+
+        Your browser does not support video.
+
+    </video>
+
+    <p id="videoMsg"></p>
     <section id="events">
         <h2>Events</h2>
         <p>Upcoming community events will appear here.</p>
@@ -179,8 +190,7 @@
 
             <br><br>
 
-            <textarea placeholder="Enter Message" required>
-    </textarea>
+            <textarea placeholder="Enter Message" required></textarea>
 
             <br><br>
 
@@ -229,12 +239,11 @@
 
     <br>
 
-    <img src="event1.jpg" id="eventImg" width="200" ondblclick="enlargeImage()">
+    <img src="./assets/event1.jpg" id="eventImg" width="200" ondblclick="enlargeImage()">
 
     <br><br>
 
-    <textarea id="feedback" placeholder="Enter Feedback" onkeyup="countChars()">
-</textarea>
+    <textarea id="feedback" placeholder="Enter Feedback" onkeyup="countChars()"></textarea>
 
     <p id="count">
         Characters: 0
@@ -284,6 +293,14 @@
 
         function confirmSubmission() {
             alert("Feedback Submitted Successfully");
+        }
+        function videoReady() {
+                document.getElementById("videoMsg").innerHTML =
+                    "Video ready to play";
+            }
+
+        window.onbeforeunload = function () {
+                return "Your form is not completed.";
         }
     </script>
 </body>
