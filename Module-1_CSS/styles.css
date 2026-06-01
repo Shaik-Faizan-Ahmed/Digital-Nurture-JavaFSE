@@ -91,4 +91,39 @@ h2{
         #0066cc
     );
 }
- 
+/* Typography */
+
+/* Entire Website */
+
+body{
+    font-family:'Poppins',sans-serif;
+}
+
+/* Main Header */
+
+#mainHeader{
+    text-align:center;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+
+/* Section Headings */
+
+h2{
+    text-transform:uppercase;
+    font-size:24px;
+}
+
+/* Paragraph Styling */
+
+p{
+    line-height:1.8;
+    font-size:16px;
+}
+
+/* Event Cards */
+
+.eventCard{
+    font-style:italic;
+    font-weight:600;
+}
