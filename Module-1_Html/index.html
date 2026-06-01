@@ -168,26 +168,25 @@
 
             <br><br>
 
-            <select required>
+            <select id="eventType" onchange="savePreference()" required>
 
                 <option value="">
                     Select Event
                 </option>
 
-                <option>
+                <option value="Sports Meet">
                     Sports Meet
                 </option>
 
-                <option>
+                <option value="Cultural Fest">
                     Cultural Fest
                 </option>
 
-                <option>
+                <option value="Tree Plantation">
                     Tree Plantation
                 </option>
 
             </select>
-
             <br><br>
 
             <textarea placeholder="Enter Message" required></textarea>
@@ -203,7 +202,9 @@
             <output id="confirmation"></output>
 
         </form>
-
+        <button onclick="clearPreferences()">
+            Clear Preferences
+        </button>
     </section>
     <section id="contact">
         <h2>Contact</h2>
@@ -302,6 +303,29 @@
         window.onbeforeunload = function () {
                 return "Your form is not completed.";
         }
+        function savePreference() {
+                let event =
+                    document.getElementById("eventType").value;
+
+                localStorage.setItem("preferredEvent", event);
+            }
+
+            function loadPreference() {
+                let saved =
+                    localStorage.getItem("preferredEvent");
+
+                if (saved) {
+                    document.getElementById("eventType").value = saved;
+                }
+            }
+
+            function clearPreferences() {
+                localStorage.clear();
+                sessionStorage.clear();
+
+                alert("Preferences Cleared");
+            }
+            window.onload = loadPreference;
     </script>
 </body>
 
