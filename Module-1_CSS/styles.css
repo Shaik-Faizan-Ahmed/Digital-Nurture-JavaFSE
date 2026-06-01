@@ -160,3 +160,33 @@ tr:nth-child(even){
     column-gap:30px;
     column-rule:1px solid gray;
 }
+/* Responsive Design */
+
+@media screen and (max-width:768px){
+
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+
+    .galleryImage{
+        width:100%;
+        height:auto;
+    }
+
+    h1{
+        font-size:24px;
+    }
+
+    h2{
+        font-size:20px;
+    }
+
+    form{
+        width:90%;
+    }
+
+    table{
+        font-size:14px;
+    }
+}
