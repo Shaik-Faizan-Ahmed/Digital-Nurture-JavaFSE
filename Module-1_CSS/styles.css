@@ -153,3 +153,10 @@ td{
 tr:nth-child(even){
     background-color:#f2f2f2;
 }
+/* Multi Column Layout */
+
+.newsArticle{
+    column-count:2;
+    column-gap:30px;
+    column-rule:1px solid gray;
+}
