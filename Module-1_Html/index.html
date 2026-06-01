@@ -199,52 +199,52 @@
         <h2>Contact</h2>
         <p>Contact the city council for assistance.</p>
     </section>
-<h2>Event Feedback</h2>
+    <h2>Event Feedback</h2>
 
-<input type="text" id="phone" placeholder="Enter Phone Number" onblur="validatePhone()">
+    <input type="text" id="phone" placeholder="Enter Phone Number" onblur="validatePhone()">
 
-<br><br>
+    <br><br>
 
-<select onchange="showFee(this.value)">
+    <select onchange="showFee(this.value)">
 
-    <option value="">
-        Select Event
-    </option>
+        <option value="">
+            Select Event
+        </option>
 
-    <option value="100">
-        Sports Meet
-    </option>
+        <option value="100">
+            Sports Meet
+        </option>
 
-    <option value="200">
-        Cultural Fest
-    </option>
+        <option value="200">
+            Cultural Fest
+        </option>
 
-    <option value="150">
-        Tree Plantation
-    </option>
+        <option value="150">
+            Tree Plantation
+        </option>
 
-</select>
+    </select>
 
-<p id="fee"></p>
+    <p id="fee"></p>
 
-<br>
+    <br>
 
-<img src="event1.jpg" id="eventImg" width="200" ondblclick="enlargeImage()">
+    <img src="event1.jpg" id="eventImg" width="200" ondblclick="enlargeImage()">
 
-<br><br>
+    <br><br>
 
-<textarea id="feedback" placeholder="Enter Feedback" onkeyup="countChars()">
+    <textarea id="feedback" placeholder="Enter Feedback" onkeyup="countChars()">
 </textarea>
 
-<p id="count">
-    Characters: 0
-</p>
+    <p id="count">
+        Characters: 0
+    </p>
 
-<br>
+    <br>
 
-<button onclick="confirmSubmission()">
-    Submit Feedback
-</button>
+    <button onclick="confirmSubmission()">
+        Submit Feedback
+    </button>
     <!--Footer-->
 
     <footer>
@@ -252,12 +252,39 @@
     </footer>
     <script>
 
-    function showMessage()
-    {
-        document.getElementById("confirmation").innerHTML=
-        "Registration Successful!";
-    }
-    
+        function showMessage()
+        {
+            document.getElementById("confirmation").innerHTML=
+            "Registration Successful!";
+        }
+        function validatePhone() {
+            let p = document.getElementById("phone").value;
+
+            if (p.length != 10) {
+                alert("Enter a valid 10-digit phone number");
+            }
+        }
+
+        function showFee(amount) {
+            document.getElementById("fee").innerHTML =
+                "Event Fee: ₹" + amount;
+        }
+
+        function enlargeImage() {
+            document.getElementById("eventImg").style.width = "400px";
+        }
+
+        function countChars() {
+            let text =
+                document.getElementById("feedback").value;
+
+            document.getElementById("count").innerHTML =
+                "Characters: " + text.length;
+        }
+
+        function confirmSubmission() {
+            alert("Feedback Submitted Successfully");
+        }
     </script>
 </body>
 
