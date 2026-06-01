@@ -300,6 +300,7 @@
         }
 
         function confirmSubmission() {
+            console.log("Feedback submitted");
             alert("Feedback Submitted Successfully");
         }
         function videoReady() {
@@ -351,6 +352,8 @@
                     }
                 }
                 function showPosition(position) {
+                    console.log(position.coords.latitude);
+                    console.log(position.coords.longitude);
                         document.getElementById("location").innerHTML =
                             "Latitude: " +
                             position.coords.latitude +
