@@ -12,6 +12,65 @@
     background-color:yellow;
 }
 
+/* Universal Selector */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Typography */
+
+body{
+    font-family:'Poppins',sans-serif;
+    background-color:#f5f5f5;
+}
+
+h2{
+    color:white;
+    padding:10px;
+    font-size:24px;
+    text-transform:uppercase;
+    background:linear-gradient(
+        to right,
+        #003366,
+        #0066cc
+    );
+}
+
+h3,
+p{
+    color:darkgreen;
+}
+
+p{
+    font-size:16px;
+    line-height:1.8;
+}
+
+/* Main Header */
+
+#mainHeader{
+    background-color:navy;
+    color:white;
+    padding:15px;
+    text-align:center;
+    letter-spacing:2px;
+    font-weight:bold;
+}
+
+/* Event Cards */
+
+.eventCard{
+    border:1px solid gray;
+    padding:10px;
+    margin:10px;
+    background-color:rgba(0,102,204,0.1);
+    font-style:italic;
+    font-weight:600;
+}
+
 /* Gallery Images */
 
 .galleryImage{
@@ -37,96 +96,38 @@ textarea{
     margin-bottom:10px;
     padding:8px;
 }
-/* Universal Selector */
 
-*{
-    margin:0;
-    padding:0;
+/* Navigation Links */
+
+nav a:link{
+    color:blue;
+    text-decoration:none;
 }
 
-/* Element Selector */
-
-h2{
-    color:darkblue;
+nav a:visited{
+    color:purple;
 }
 
-/* ID Selector */
-
-#mainHeader{
-    background-color:navy;
-    color:white;
-    padding:15px;
-    text-align:center;
+nav a:hover{
+    color:red;
 }
 
-/* Class Selector */
-
-.eventCard{
-    border:1px solid gray;
-    padding:10px;
-    margin:10px;
-
-    background-color:rgba(0,102,204,0.1);
+nav a:active{
+    color:green;
 }
 
-/* Grouping Selector */
+/* List Styling */
 
-h3,
-p{
-    color:darkgreen;
-}
-/* Color and Background Styling */
-
-body{
-    background-color:#f5f5f5;
+ul{
+    list-style-type:square;
+    list-style-position:inside;
 }
 
-h2{
-    color:white;
-    padding:10px;
-
-    background:linear-gradient(
-        to right,
-        #003366,
-        #0066cc
-    );
-}
-/* Typography */
-
-/* Entire Website */
-
-body{
-    font-family:'Poppins',sans-serif;
+li{
+    padding:5px;
+    margin:5px;
 }
 
-/* Main Header */
-
-#mainHeader{
-    text-align:center;
-    letter-spacing:2px;
-    font-weight:bold;
-}
-
-/* Section Headings */
-
-h2{
-    text-transform:uppercase;
-    font-size:24px;
-}
-
-/* Paragraph Styling */
-
-p{
-    line-height:1.8;
-    font-size:16px;
-}
-
-/* Event Cards */
-
-.eventCard{
-    font-style:italic;
-    font-weight:600;
-}
 /* Table Styling */
 
 table{
