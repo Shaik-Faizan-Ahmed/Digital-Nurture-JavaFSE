@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Community Portal</title>
+</head>
+
+<body>
+
+    <h1>Event Registration</h1>
+
+    <form id="registrationForm">
+
+        <label>Name:</label>
+        <input type="text" name="name">
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email">
+        <br><br>
+
+        <label>Select Event:</label>
+        <select name="event">
+            <option value="">Choose Event</option>
+            <option value="Music Night">Music Night</option>
+            <option value="Coding Workshop">Coding Workshop</option>
+            <option value="Dance Show">Dance Show</option>
+        </select>
+
+        <br><br>
+
+        <button type="submit">
+            Register
+        </button>
+
+    </form>
+
+    <p id="error" style="color:red"></p>
+    <p id="success" style="color:green"></p>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
