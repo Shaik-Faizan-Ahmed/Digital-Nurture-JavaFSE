@@ -1,0 +1,61 @@
+// ============================================================
+// _custom.scss  —  Task 19: Bootstrap 5 Sass Customisation
+// ============================================================
+//
+// Exercise 19.1 — Project setup with npm + Sass
+// Exercise 19.2 — Override $primary color and $border-radius
+//
+// HOW TO USE
+// ----------
+// 1. npm init -y
+// 2. npm install bootstrap
+// 3. npm install sass --save-dev
+// 4. Place this file at:  scss/_custom.scss
+// 5. Compile:
+//      npx sass scss/_custom.scss dist/custom.css --style compressed
+//    Or watch for changes:
+//      npx sass --watch scss/_custom.scss dist/custom.css
+// 6. In your HTML replace the Bootstrap CDN <link> with:
+//      <link rel="stylesheet" href="dist/custom.css">
+// ============================================================
+
+// ------------------------------------------------------------
+// Exercise 19.2 — Override Bootstrap Sass variables
+// IMPORTANT: These MUST come BEFORE the @use / @import below
+// ------------------------------------------------------------
+
+// Custom primary color (purple instead of Bootstrap blue)
+$primary: #6f42c1;
+
+// Custom border radius (slightly more rounded than default 0.375rem)
+$border-radius:       0.75rem;
+$border-radius-sm:    0.5rem;
+$border-radius-lg:    1rem;
+$border-radius-xl:    1.5rem;
+$border-radius-pill:  50rem;
+
+// Optional extras — uncomment to customise further
+// $secondary:   #20c997;           // teal secondary
+// $font-family-base: 'Inter', sans-serif;
+// $font-size-base: 1rem;
+// $spacer: 1.25rem;
+// $grid-gutter-width: 2rem;
+
+// ------------------------------------------------------------
+// Import all of Bootstrap (uses the npm package source)
+// ------------------------------------------------------------
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// ------------------------------------------------------------
+// Your own additional styles go here (after the import)
+// ------------------------------------------------------------
+
+// Example: custom utility class
+.text-purple {
+    color: $primary !important;
+}
+
+.bg-purple {
+    background-color: $primary !important;
+    color: #fff;
+}
